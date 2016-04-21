@@ -39,10 +39,11 @@ module.exports = {
     },
     html: {
         src: src + '/**/*.html',
+        includes: src + '/includes/**/*.html',
         dest: dest + '/'
     },
     js: {
-        all: src + '/js/**/*.js',
+        all: src + '/**/*.js',
         src: src + '/js/script.js',
         dest: dest + '/js',
     }

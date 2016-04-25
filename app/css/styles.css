@@ -1,4 +1,20 @@
 /* Styles.css */
-.item-test {
-    background: url('../images/agents.png') no-repeat top left;
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,300,300italic);
+
+@font-face {
+
+	font-family: "MyriadPro";
+	font-style: normal;
+	font-weight: 400;
+	src: url("../fonts/MyriadPro-Regular.otf");
+
+}
+
+@font-face {
+
+	font-family: 'Knockout48';
+	src: url("../fonts/knockout48featherweight.otf");
+	font-weight: normal;
+	font-style: normal;
+
 }

@@ -1,6 +1,437 @@
-/* Standard Navigation */
-
-#standard-navigation .test {
-    background: url('./images/agents.png') no-repeat top left;
+.profile-section {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
+.profile-section {
+    background-color: #555;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    background-image: url("images/header-mask-portfolio-bg.jpg");
+    background-image: -webkit-image-set(url("images/header-mask-portfolio-bg.jpg") 1x, url("images/header-mask-portfolio-bg@2x.jpg") 2x, url("images/header-mask-portfolio-bg@3x.jpg") 3x);
+    color: #fff;
+    padding-bottom: 89px;
+}
+
+@media (max-width: 767px) {
+    .profile-section {
+        padding-bottom: 41px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .profile-section {
+        padding-bottom: 63px;
+    }
+}
+
+.profile-header {
+    width: 100%;
+    float: left;
+}
+
+@media (max-width: 767px) {
+    .profile-header {
+        width: 100%;
+        padding-left: 14px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .profile-header {
+        float: right;
+        width: 70%;
+        padding-left: 9px;
+    }
+}
+
+@media (min-width: 992px) {
+    .profile-header {
+        float: right;
+        width: 70%;
+        padding-left: 18px;
+    }
+}
+
+.profile-full-name {
+    font-size: 30px;
+    font-family: "MyriadPro", helvetica, sans-serif;
+}
+
+@media (max-width: 767px) {
+    .profile-full-name {
+        font-size: 30px;
+        margin-top: 39px;
+        margin-bottom: 7px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .profile-full-name {
+        font-size: 50px;
+        margin-top: 79px;
+        margin-bottom: 3px;
+        letter-spacing: 1px;
+    }
+}
+
+@media (min-width: 992px) {
+    .profile-full-name {
+        font-size: 70px;
+        margin-top: 84px;
+        margin-bottom: 12px;
+    }
+}
+
+.profile-title {
+    font-family: "Open Sans", helvetica, sans-serif;
+    font-size: 22px;
+    padding-left: 2px;
+    letter-spacing: 1px;
+    display: inline-block;
+    position: relative;
+    float: left;
+}
+
+@media (max-width: 767px) {
+    .profile-title {
+        font-size: 16px;
+        padding-top: 8px;
+        margin-bottom: 12px;
+        line-height: 1;
+        padding-right: 22px;
+        letter-spacing: 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .profile-title {
+        padding-top: 3px;
+        margin-left: -1px;
+        padding-right: 24px;
+    }
+}
+
+@media (min-width: 992px) {
+    .profile-title {
+        padding-top: 4px;
+        margin-left: 2px;
+        padding-right: 37px;
+        letter-spacing: 0;
+    }
+}
+
+.profile-icons {
+    display: inline-block;
+    position: relative;
+    float: left;
+}
+
+.profile-picture {
+    width: 40%;
+    float: left;
+    padding-top: 21px;
+    padding-right: 5px;
+    padding-left: 17px;
+}
+
+.profile-picture img {
+    width: 100%;
+}
+
+.profile-picture .profile-image-container {
+    border: 2px solid #fff;
+    width: 100%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .profile-picture {
+        width: 30%;
+        padding-top: 69px;
+        padding-right: 22px;
+        padding-left: 15px;
+    }
+}
+
+@media (min-width: 992px) {
+    .profile-picture {
+        width: 30%;
+        padding-top: 50px;
+        padding-right: 43px;
+        padding-left: 13px;
+    }
+}
+
+.profile-buttons {
+    z-index: 1000;
+    width: 60%;
+    float: left;
+    padding-top: 21px;
+}
+
+@media (max-width: 767px) {
+    .profile-buttons {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .profile-buttons {
+        width: 70%;
+        float: right;
+        padding-top: 24px;
+        padding-left: 10px;
+        padding-right: 15px;
+    }
+}
+
+@media (min-width: 992px) {
+    .profile-buttons {
+        width: 70%;
+        float: right;
+        padding-top: 41px;
+        padding-left: 21px;
+        padding-right: 15px;
+    }
+}
+
+.profile-summary {
+    width: 100%;
+    float: left;
+    padding-top: 9px;
+    padding-left: 17px;
+    padding-right: 15px;
+    line-height: 1.28;
+    font-family: "Open Sans", helvetica, sans-serif;
+    font-size: 18px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .profile-summary {
+        width: 70%;
+        padding-top: 17px;
+        padding-left: 10px;
+        line-height: 1.95;
+        letter-spacing: 0.6px;
+    }
+}
+
+@media (min-width: 992px) {
+    .profile-summary {
+        width: 70%;
+        padding-top: 17px;
+        padding-left: 22px;
+        line-height: 1.95;
+        letter-spacing: 0.6px;
+    }
+}
+
+.without-photo .profile-picture {
+    display: none;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .without-photo .profile-header {
+        width: 100%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .without-photo .profile-header {
+        width: 100%;
+        float: left;
+        padding-left: 14px;
+    }
+}
+
+@media (min-width: 992px) {
+    .without-photo .profile-full-name {
+        margin-top: 74px;
+        margin-bottom: 18px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .without-photo .profile-summary {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .without-photo .profile-summary {
+        padding-left: 15px;
+        padding-top: 31px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .without-photo .profile-buttons {
+        width: 100%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .without-photo .profile-buttons {
+        width: 100%;
+        float: left;
+        padding-left: 15px;
+    }
+}
+
+.btn-profile-action {
+    font-family: "Knockout48", helvetica, sans-serif;
+    font-size: 22px;
+    line-height: 1;
+    padding: 16px 40px 13px 40px;
+    margin-right: 23px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.btn-profile-action:focus, .btn-profile-action.focus {
+    color: #fff;
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.btn-profile-action:hover {
+    color: #3586a1;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+@media (max-width: 767px) {
+    .btn-profile-action {
+        width: 100%;
+        padding: 13px 0 10px 0;
+        font-size: 20px;
+        margin-bottom: 12px;
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .btn-profile-action {
+        padding: 16px 28px 12px 28px;
+        margin-right: 15px;
+        font-size: 22px;
+    }
+}
+
+.btn-profile-icon {
+    height: 36px;
+    width: 36px;
+}
+
+@media (min-width: 992px) {
+    .btn-profile-icon {
+        margin-right: 0.4px;
+    }
+}
+
+.btn-twitter {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.btn-twitter, .btn-twitter:focus, .btn-twitter.focus {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: url("images/twitter-copy.png");
+    background-image: -webkit-image-set(url("images/twitter-copy.png") 1x, url("images/twitter-copy@2x.png") 2x, url("images/twitter-copy@3x.png") 3x);
+}
+
+.btn-twitter:hover {
+    background-image: url("images/twitter-copy-hover.png");
+    background-image: -webkit-image-set(url("images/twitter-copy-hover.png") 1x, url("images/twitter-copy-hover@2x.png") 2x, url("images/twitter-copy-hover@3x.png") 3x);
+}
+
+.btn-twitter:active, .btn-twitter.active {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: url("images/twitter-copy.png");
+    background-image: -webkit-image-set(url("images/twitter-copy.png") 1x, url("images/twitter-copy@2x.png") 2x, url("images/twitter-copy@3x.png") 3x);
+}
+
+.btn-linkedin {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.btn-linkedin, .btn-linkedin:focus, .btn-linkedin.focus {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: url("images/linkedin-copy.png");
+    background-image: -webkit-image-set(url("images/linkedin-copy.png") 1x, url("images/linkedin-copy@2x.png") 2x, url("images/linkedin-copy@3x.png") 3x);
+}
+
+.btn-linkedin:hover {
+    background-image: url("images/linkedin-copy-hover.png");
+    background-image: -webkit-image-set(url("images/linkedin-copy-hover.png") 1x, url("images/linkedin-copy-hover@2x.png") 2x, url("images/linkedin-copy-hover@3x.png") 3x);
+}
+
+.btn-linkedin:active, .btn-linkedin.active {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: url("images/linkedin-copy.png");
+    background-image: -webkit-image-set(url("images/linkedin-copy.png") 1x, url("images/linkedin-copy@2x.png") 2x, url("images/linkedin-copy@3x.png") 3x);
+}
+
+.btn-facebook {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.btn-facebook, .btn-facebook:focus, .btn-facebook.focus {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: url("images/facebook-copy.png");
+    background-image: -webkit-image-set(url("images/facebook-copy.png") 1x, url("images/facebook-copy@2x.png") 2x, url("images/facebook-copy@3x.png") 3x);
+}
+
+.btn-facebook:hover {
+    background-image: url("images/facebook-copy-hover.png");
+    background-image: -webkit-image-set(url("images/facebook-copy-hover.png") 1x, url("images/facebook-copy-hover@2x.png") 2x, url("images/facebook-copy-hover@3x.png") 3x);
+}
+
+.btn-facebook:active, .btn-facebook.active {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: url("images/facebook-copy.png");
+    background-image: -webkit-image-set(url("images/facebook-copy.png") 1x, url("images/facebook-copy@2x.png") 2x, url("images/facebook-copy@3x.png") 3x);
+}
+
+.btn-google {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.btn-google, .btn-google:focus, .btn-google.focus {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: url("images/google-copy.png");
+    background-image: -webkit-image-set(url("images/google-copy.png") 1x, url("images/google-copy@2x.png") 2x, url("images/google-copy@3x.png") 3x);
+}
+
+.btn-google:hover {
+    background-image: url("images/google-copy-hover.png");
+    background-image: -webkit-image-set(url("images/google-copy-hover.png") 1x, url("images/google-copy-hover@2x.png") 2x, url("images/google-copy-hover@3x.png") 3x);
+}
+
+.btn-google:active, .btn-google.active {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: url("images/google-copy.png");
+    background-image: -webkit-image-set(url("images/google-copy.png") 1x, url("images/google-copy@2x.png") 2x, url("images/google-copy@3x.png") 3x);
+}

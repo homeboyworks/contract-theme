@@ -1,8 +1,39 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <h1>Profile goes here</h1>
-      <p>Example of dynamic data: <%- profile.first_name %></p>
-    </div>
-  </div>
+<div class="profile-section">
+	<div class="container">
+	  <div class="row">
+		<!--HEADER  -->
+		<div class="profile-header">
+			<h1 class="profile-full-name"><%- profile.first_name %> <%- profile.last_name %></h1>
+				<div class="profile-title"><%- profile.title %> <%- profile.designations %></div>
+				<div class="profile-icons">
+					<a class="btn btn-profile-icon btn-twitter" href="<%= profile.twitter %>"></a>
+					<a class="btn btn-profile-icon btn-linkedin" href="<%= profile.linkedin %>"></a>
+					<a class="btn btn-profile-icon btn-facebook" href="<%= profile.facebook %>"></a>
+					<a class="btn btn-profile-icon btn-google" href="<%= profile.googleplus %>"></a>
+				</div>
+		</div>
+		<!--PICTURE  -->
+		<div class="profile-picture">
+			<div class="profile-image-container">
+				<img class="img-responsive" src="<%= profile.profile_photo %>">
+			</div>
+		</div>
+		<!--SUMMARY-->
+		<div class="profile-summary hidden-xs">
+			<%- profile.professional_summary %>
+		</div>
+		<!--BUTTONS-->
+		<div class="profile-buttons">
+			<div class="profile-action-buttons">
+				<a class="btn btn-profile-action" href="#">Get a quote</a>
+				<a class="btn btn-profile-action" href="#">My account</a>
+				<a class="btn btn-profile-action" href="#">Pay now</a>
+			</div>
+		</div>
+		<!--SUMMARY-->
+		<div class="profile-summary visible-xs-block">
+			<%- profile.professional_summary %>
+		</div>
+	  </div>
+	</div>
 </div>

@@ -1,0 +1,26 @@
+.btn-profile-icon {
+  height: 36px;
+  width: 36px;
+
+  @media (min-width: 992px) {
+    // desktop
+
+    margin-right: 0.4px;
+  }
+}
+
+.btn-twitter {
+  @include button-profile-icon("images/twitter-copy", "png");
+}
+
+.btn-linkedin {
+  @include button-profile-icon("images/linkedin-copy", "png");
+}
+
+.btn-facebook {
+  @include button-profile-icon("images/facebook-copy", "png");
+}
+
+.btn-google {
+  @include button-profile-icon("images/google-copy", "png");
+}

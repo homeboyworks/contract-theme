@@ -1,0 +1,57 @@
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+@mixin button-profile-action($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  &:focus,
+  &.focus {
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+  }
+
+  &:hover {
+    color: $main_color;
+    background-color: $white;
+    border-color: $white;
+  }
+}
+
+@mixin button-profile-icon($background-url, $type) {
+  $background-url-1x: $background-url + "." + $type;
+  $background-url-2x: $background-url + "@2x." + $type;
+  $background-url-3x: $background-url + "@3x." + $type;
+
+  $background-url-hover-1x: $background-url + "-hover." + $type;
+  $background-url-hover-2x: $background-url + "-hover@2x." + $type;
+  $background-url-hover-3x: $background-url + "-hover@3x." + $type;
+
+  box-shadow: none !important;
+
+  &,
+  &:focus,
+  &.focus {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: url($background-url-1x);
+    background-image: -webkit-image-set(url($background-url-1x) 1x, url($background-url-2x) 2x, url($background-url-3x) 3x);
+  }
+
+  &:hover {
+    background-image: url($background-url-hover-1x);
+    background-image: -webkit-image-set(url($background-url-hover-1x) 1x, url($background-url-hover-2x) 2x, url($background-url-hover-3x) 3x);
+  }
+
+  &:active,
+  &.active {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: url($background-url-1x);
+    background-image: -webkit-image-set(url($background-url-1x) 1x, url($background-url-2x) 2x, url($background-url-3x) 3x);
+  }
+}

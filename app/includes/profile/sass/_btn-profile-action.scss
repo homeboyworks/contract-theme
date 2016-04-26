@@ -1,0 +1,42 @@
+.btn-profile-action {
+  //margin-left: 54px;
+  //margin-top: $desktop-navbar-padding-top;
+  font-family: $knock;
+
+  //float: right !important;
+  font-size: 22px;
+  line-height: 1;
+
+  //padding: 22px 40px 7px 40px;
+  padding: 16px 40px 13px 40px;
+
+  // for .otf
+  margin-right: 23px;
+  border-radius: 2px;
+  text-transform: uppercase;
+
+  @include button-profile-action($white, $transparent, $white);
+
+  @media (max-width: 767px) {
+    // mobile-max
+    width: 100%;
+
+    //padding: 19px 0 4px 0;
+    padding: 13px 0 10px 0;
+
+    // for .otf
+    font-size: 20px;
+    margin-bottom: 12px;
+    margin-right: 0;
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    // tablet
+    //padding: 22px 28px 6px 28px;
+    padding: 16px 28px 12px 28px;
+
+    // for .otf
+    margin-right: 15px;
+    font-size: 22px;
+  }
+}

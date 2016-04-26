@@ -1,0 +1,16 @@
+.btn-navigation-contact-us {
+  margin-left: 54px;
+  margin-top: $desktop-navbar-padding-top;
+  font-family: $knock;
+  float: right !important;
+  font-size: 23px;
+  line-height: 1;
+
+  //padding: 23px 37px 5px 37px;
+  padding: 16px 37px 12px 37px;
+
+  //for .otf
+  border-radius: 2px;
+
+  @include button-variant($white, $main_color, $main_color);
+}

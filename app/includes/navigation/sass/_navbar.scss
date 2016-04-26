@@ -1,0 +1,359 @@
+.hsct-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include clearfix;
+
+  @media (min-width: $screen-sm-min) {
+    //width: 750px;
+  }
+
+  @media (min-width: $screen-md-min) {
+    width: 970px;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    width: 1170px;
+  }
+}
+
+//
+// Navbars
+// --------------------------------------------------
+
+// Wrapper and base class
+//
+// Provide a static navbar from which we expand to create full-width, fixed, and
+// other navbar variations.
+
+.hsct-navbar {
+  // TODO done
+  position: relative;
+  background-color: $white;
+
+  //background-color: rgba(255, 246, 222, 0.23);
+  min-height: $navbar-height;
+
+  // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
+  //margin-bottom: $navbar-margin-bottom;
+  border: 0 solid transparent;
+  font-size: 16px;
+  margin: 0;
+
+  // Prevent floats from breaking the navbar
+  @include clearfix;
+
+  @media (min-width: $grid-float-breakpoint) {
+    border-radius: 0;
+  }
+
+  @media (max-width: 767px) {
+    // mobile-max
+    min-height: 58px;
+  }
+}
+
+// Navbar heading
+//
+// Groups `.navbar-brand` and `.navbar-toggle` into a single component for easy
+// styling of responsive aspects.
+
+.hsct-navbar-header {
+  // TODO done
+  @include clearfix;
+
+  @media (min-width: $grid-float-breakpoint) {
+    float: left;
+  }
+}
+
+// Navbar collapse (body)
+//
+// Group your navbar content into this for easy collapsing and expanding across
+// various device sizes. By default, this content is collapsed when <768px, but
+// will expand past that for a horizontal display.
+//
+// To start (on mobile devices) the navbar links, forms, and buttons are stacked
+// vertically and include a `max-height` to overflow in case you have too much
+// content for the user's viewport.
+
+.hsct-navbar-collapse {
+  // TODO done
+  overflow-x: visible;
+  padding-right: 15px;
+  padding-left: 15px;
+  border-top: 1px solid transparent;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+
+  @include clearfix;
+
+  -webkit-overflow-scrolling: touch;
+
+  &.in {
+    overflow-y: auto;
+  }
+
+  @media (min-width: $grid-float-breakpoint) {
+    width: auto;
+    border-top: 0;
+    box-shadow: none;
+
+    &.collapse {
+      display: block !important;
+      height: auto !important;
+      padding-bottom: 0;
+
+      // Override default setting
+      overflow: visible !important;
+    }
+
+    &.in {
+      overflow-y: visible;
+    }
+  }
+
+  @media (max-width: 991px) {
+    //$grid-float-breakpoint-max
+    position: absolute;
+    z-index: 100;
+    right: 0;
+    background-color: #f7f7f7;
+
+    //background-color: rgba(0, 255, 45, 0.32);
+    box-shadow: -11px 12px 4px 0 rgba(0, 0, 0, 0.5);
+    text-align: right;
+    padding-top: 22px;
+    width: 143px;
+    height: 270px;
+    border: solid 1px #979797;
+
+    //TODO edit
+  }
+}
+
+// Both navbar header and collapse
+//
+// When a container is present, change the behavior of the header and collapse.
+
+.container,
+.container-fluid {
+  // TODO done
+  > .hsct-navbar-header,
+  > .hsct-navbar-collapse {
+    margin-right: -15px;
+    margin-left: -15px;
+
+    @media (min-width: $grid-float-breakpoint) {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+// Brand/project name
+
+.hsct-navbar-brand {
+  // TODO done
+  float: left;
+  padding: 7.5px 15px;
+
+  // TODO check
+  width: 260px;
+  height: 55px;
+  margin-left: 9px;
+  margin-top: $desktop-navbar-padding-top;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-image: url("images/navbar-logo.png");
+  background-image: -webkit-image-set(url("images/navbar-logo.png") 1x, url("images/navbar-logo@2x.png") 2x, url("images/navbar-logo@3x.png") 3x);
+
+  @media (max-width: $grid-float-breakpoint-max) {
+    // TODO check
+
+    width: 226px;
+    height: 55px;
+    margin-left: 22px;
+    margin-top: 22px;
+  }
+
+  @media (max-width: 767px) {
+    // mobile-max
+
+    width: 128px;
+    margin-left: 14px;
+    margin-top: 18px;
+    padding: 1px 1px;
+    height: 30px;
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    // tablet
+
+    width: 225px;
+    margin-left: 15px;
+    margin-top: 23px;
+    padding: 1px 1px;
+    height: 50px;
+  }
+
+  @media (max-width: 210px) {
+    // super-small-mobile
+
+    width: 40%;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  > img {
+    display: block;
+  }
+
+  //@media (min-width: $grid-float-breakpoint) {
+  //.navbar > .container &,
+  //.navbar > .container-fluid & {
+  //  margin-left: -$navbar-padding-horizontal;
+  //}
+  //}
+}
+
+// Navbar toggle
+//
+// Custom button for toggling the `.navbar-collapse`, powered by the collapse
+// JavaScript plugin.
+
+.hsct-navbar-toggle {
+  position: relative;
+  float: right;
+  background-color: transparent;
+  background-image: none;
+
+  // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid transparent;
+  font-size: 20px;
+  line-height: 1.3;
+  color: $btn-toggle-color;
+  font-family: $knock;
+  border-left-color: #757575;
+  border-radius: 0;
+  margin: 0;
+
+  //padding: 38px 25px 22px 28px;
+  padding: 34px 25px 27px 28px;
+
+  //for otf
+
+  // We remove the `outline` here, but later compensate by attaching `:hover`
+  // styles to `:focus`.
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover,
+  &:focus,
+  &.opened {
+    background-color: $btn-toggle-hover-bg;
+    color: $btn-toggle-hover-color;
+  }
+
+  // Bars
+  //.icon-bar {
+  //display: block;
+  //width: 22px;
+  //height: 2px;
+  //border-radius: 1px;
+  //}
+  //.icon-bar + .icon-bar {
+  //margin-top: 4px;
+  //}
+
+  @media (min-width: $grid-float-breakpoint) {
+    display: none;
+  }
+
+  @media (max-width: 767px) {
+    // mobile-max
+    //padding: 23px 13px 11px 15px;
+    padding: 19px 13px 15px 15px;
+
+    // for otf
+    font-size: 18px;
+  }
+}
+
+// Navbar nav links
+//
+// Builds on top of the `.nav` components with its own modifier class to make
+// the nav the full height of the horizontal nav (above 768px).
+
+.hsct-navbar-nav {
+  margin: 7.5px -15px;
+
+  > li > a {
+    color: $main_color;
+    margin-left: 13px;
+    margin-right: 13px;
+    margin-top: $desktop-navbar-padding-top;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    line-height: 20px;
+
+    // TODO edit
+
+    &:hover,
+    &:focus {
+      color: $main_color;
+      background-color: transparent;
+      text-decoration: $link-hover-decoration;
+    }
+
+    @media (max-width: 991px) {
+      //$grid-float-breakpoint-max
+      margin: 0;
+      font-size: 18px;
+      padding-top: 11px;
+      padding-bottom: 11px;
+      padding-right: 28px;
+    }
+  }
+
+
+
+  // Uncollapse the nav
+  @media (min-width: $grid-float-breakpoint) {
+    float: left;
+    margin: 0;
+
+    > li {
+      float: left;
+
+      > a {
+        //padding-top:    7.5px;
+        //padding-bottom: 7.5px;
+     
+      }
+    }
+  }
+}
+
+
+
+@media (min-width: $grid-float-breakpoint) {
+  .navbar-left {
+    float: left !important;
+  }
+
+  .navbar-right {
+    float: right !important;
+    margin-right: -15px;
+
+    ~ .navbar-right {
+      margin-right: 0;
+    }
+  }
+}
